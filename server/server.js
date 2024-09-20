@@ -15,7 +15,13 @@ dotenv.config();
 // Middleware - Core Express Configurations
 const app = express();
 app.use(express.json());
-app.use(cors());
+
+app.use(cors({
+    origin: 'https://userdata-frontend.onrender.com',
+    methods: ['GET', 'POST', 'PUT', 'DELETE'], // adjust methods as necessary
+    credentials: true // if you need to pass cookies or authorization headers
+}));
+
 app.use(bodyParser.json());
 
 // MongoDB - Database Connection
