@@ -8,7 +8,7 @@ const App = () => {
   return (
     <div className='w-full min-h-screen flex items-center justify-center'>
       <Routes>
-        <Route path='/register' element={<Register/>}/>
+        <Route path='/' element={<Register/>}/>
         <Route path='/home' element={<HomePage/>}/>
       </Routes>
     </div>
