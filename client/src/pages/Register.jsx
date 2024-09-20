@@ -13,7 +13,7 @@ const Register = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post('http://localhost:5000/api/auth/register', { ...formData,role:'User'});
+            const response = await axios.post('https://userdata-backend.onrender.com/api/auth/register', { ...formData,role:'User'});
             console.log('Response:', response);
             navigate('/home');
         } catch (error) {
